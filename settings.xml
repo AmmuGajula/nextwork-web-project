@@ -1,0 +1,31 @@
+<settings>
+<servers>
+  <server>
+    <id>network-network-packages</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<profiles>
+  <profile>
+    <id>network-network-packages</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>network-network-packages</id>
+        <url>https://network-779846786531.d.codeartifact.us-east-1.amazonaws.com/maven/network-packages/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+<mirrors>
+  <mirror>
+    <id>network-network-packages</id>
+    <name>network-network-packages</name>
+    <url>https://network-779846786531.d.codeartifact.us-east-1.amazonaws.com/maven/network-packages/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
